@@ -58,12 +58,16 @@ class linked_list:
    def deleteAtBegin(self):
        if self.head is None:
            return
-
        temp=self.head
        self.head=self.head.next
+       temp.next=None
        return
+    #    temp=self.head
+    #    self.head=self.head.next
+    #   return
 
    def deleteAtEnd(self):
+
        if self.head is None:
            return
        temp=self.head
@@ -80,10 +84,17 @@ class linked_list:
          node = node.next
 
 llist = linked_list()
-llist.insertAtBegin(12)     
+#llist.insertAtBegin(12)     
 llist.insertAtBegin(2)
 llist.insertAtBegin(3)  
 llist.insertAtEnd(9)
+llist.insertAtBegin(12)
+llist.insertAtEnd(33)
+
+llist.deleteAtEnd()
+
+# llist.deleteAtBegin()
+
 # llist.insertAtBegin(8)
 # llist.insertAtBegin(62)       
 # llist.insertAtEnd(45)
